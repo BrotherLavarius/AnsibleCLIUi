@@ -70,8 +70,6 @@ class RunPageForm(npyscreen.Form):
         if ssh_key_file:
             cmd.append(f'--private-key={ssh_key_file}')
 
-        os.environ['ANSIBLE_FORCE_COLOR'] = '1'  # Add this line to force color mode
-
 
         self.log_output.add_line(f"Running: {' '.join(cmd)}")
 
